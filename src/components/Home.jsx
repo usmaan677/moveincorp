@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 function Home() {
   const teamMembers = [
@@ -31,17 +32,17 @@ function Home() {
             </p>
             
             <p className="text-lg text-indigo-200 max-w-3xl mx-auto leading-relaxed">
-              We are a dynamic group of 5 passionate developers and computer science students 
+              We are a dynamic group of 5 passionate developers and computer scientists  
               dedicated to creating exceptional projects and innovative solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-              <button className="px-8 py-4 bg-white text-indigo-600 rounded-full font-semibold hover:bg-indigo-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <Link to="/projects" className="px-8 py-4 bg-white text-indigo-600 rounded-full font-semibold hover:bg-indigo-50 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center text-center">
                 View Our Work
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-indigo-600 transform hover:scale-105 transition-all duration-300">
+              </Link>
+              <Link to="/contact" className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-indigo-600 transform hover:scale-105 transition-all duration-300 flex items-center justify-center text-center">
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -79,7 +80,7 @@ function Home() {
                     {member}
                   </h3>
                   <p className="text-gray-600 text-center mb-4">
-                    Developer & CS Student
+                    {member === "Ammar Khan" ? "Developer & CIS Student" : "Developer & CS Student"}
                   </p>
                   
                   <div className="flex justify-center space-x-3">
